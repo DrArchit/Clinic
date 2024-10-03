@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -339,6 +338,34 @@ footer {
         margin-left: 0;
     }
 }
+.questionnaire-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.questionnaire-card {
+    background-color: #f0f8ff;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.questionnaire-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.questionnaire-card h3 {
+    color: #1e90ff;
+    margin-top: 0;
+}
+
+.questionnaire-form {
+    margin-top: 15px;
+}
     </style>
 </head>
 <body>
@@ -353,6 +380,7 @@ footer {
         <a href="#appointment">Appointment</a>
         <a href="#address">Location</a>
         <a href="#mental-health-articles">Mental Health Resources</a>
+        <a href="#mental-health-questionnaires">Questionnaires</a>
         <a href="#publications">Publications</a>
         <a href="#app">Clinic App</a>
         <a href="#about">About</a>
@@ -380,8 +408,7 @@ footer {
                 </div>
             </div>
         </section>
-       
-      <section id="appointment">
+            <section id="appointment">
         <h2>Book an Appointment</h2>
         <img src="https://i.pinimg.com/564x/70/2c/3d/702c3df03370bbb5a8e36f0d56c1e15c.jpg" alt="Appointment Icon">
         <div class="appointment-buttons">
@@ -486,6 +513,36 @@ footer {
                 </div>
             </div>
     </section>
+    <section id="mental-health-questionnaires">
+    <h2>Mental Health Questionnaires</h2>
+    <p>These questionnaires are designed to help you assess your mental health. Please note that these are not diagnostic tools and should not replace professional medical advice. If you have concerns about your mental health, please consult with a healthcare professional.</p>
+
+    <div class="questionnaire-grid">
+        <div class="questionnaire-card">
+            <h3>Maternal Mental Health Assessment</h3>
+            <p>This questionnaire focuses on mental health concerns specific to maternal health.</p>
+            <div class="questionnaire-form">
+                <script type="text/javascript" src="https://form.jotform.com/jsform/232132933070042"></script>
+            </div>
+        </div>
+
+        <div class="questionnaire-card">
+            <h3>PHQ-9: Depression Assessment</h3>
+            <p>The Patient Health Questionnaire (PHQ-9) is a self-administered test for assessing depression.</p>
+            <div class="questionnaire-form">
+                <script type="text/javascript" src="https://form.jotform.com/jsform/230524897086061"></script>
+            </div>
+        </div>
+
+        <div class="questionnaire-card">
+            <h3>GAD-7: Anxiety Assessment</h3>
+            <p>The Generalized Anxiety Disorder (GAD-7) questionnaire is a screening tool for anxiety.</p>
+            <div class="questionnaire-form">
+            <script type="text/javascript" src="https://form.jotform.com/jsform/230532294251045"></script>            </div>
+        </div>
+    </div>
+</section>
+
        
     <section id="publications">
     <h2>Publications</h2>
@@ -561,8 +618,7 @@ footer {
         </div>
     </div>
 </section>
-      
-    <section id="app">
+<section id="app">
             <h2>Clinic App</h2>
             <p>For a better experience, download and use our clinic's app for managing appointments, tracking your health, and accessing articles and videos.</p>
             <h2>Compassionate Care Beyond Boundaries</h2>
