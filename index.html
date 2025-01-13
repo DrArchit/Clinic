@@ -408,14 +408,36 @@ footer {
                 </div>
             </div>
         </section>
-            <section id="appointment">
-        <h2>Book an Appointment</h2>
-        <img src="https://i.pinimg.com/564x/70/2c/3d/702c3df03370bbb5a8e36f0d56c1e15c.jpg" alt="Appointment Icon">
-        <div class="appointment-buttons">
-            <a href="https://archit7098.github.io/appointment/" class="appointment-button book-appointment">Book Appointment</a>
-            <a href="https://archit7098.github.io/appointment/" class="appointment-button tele-consultation">TELE CONSULTATION AVAILABLE</a>
+        
+           <section id="appointment">
+    <h2>Book an Appointment</h2>
+    <img src="https://i.pinimg.com/564x/70/2c/3d/702c3df03370bbb5a8e36f0d56c1e15c.jpg" alt="Appointment Icon">
+    
+    <div class="appointment-buttons">
+        <button onclick="toggleTeleConsult()" class="appointment-button tele-consultation">CLICK HERE FOR TELE CONSULTATION </button>
+         <a href="https://archit7098.github.io/appointment/" class="appointment-button book-appointment">Book your appointment at our clinic</a>
+    </div>
+
+    <!-- Added Tele-consultation Instructions with initial display:none -->
+    <div id="teleConsultInfo" class="tele-consultation-info" style="display: none; margin: 20px auto; padding: 20px; background-color: #f0f8ff; border-radius: 8px; max-width: 800px; text-align: left;">
+        <h3 style="color: #1e90ff; margin-bottom: 15px;">Important Information Regarding Teleconsultations</h3>
+        
+        <div style="margin-bottom: 20px;">
+            <h4 style="color: #4169e1; margin-bottom: 10px;">Consultation Process</h4>
+            <ul style="list-style-type: disc; padding-left: 20px;">
+                <li>All teleconsultations require a prior appointment through our reception or online appointment system.</li>
+                <li>You will receive a meeting link after appointment confirmation.</li>
+                <li>Homoeopathic consultations may take up to 1 hour, we appreciate your understanding and patience during the session. </li>
+                <li>Please ensure you are in a proper network area with stable internet connection.</li>
+                <li>Complete payment is required before medicine dispatch to maintain efficacy of our platfform.</li>
+            </ul>
         </div>
-   </section>
+        <!-- Added new appointment button below instructions -->
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="https://archit7098.github.io/appointment/" class="button" style="background-color: #0000cd; color: white; padding: 12px 24px; border-radius: 5px; text-decoration: none; display: inline-block; font-weight: bold;">CLICK HERE FOR APPOINTMENT</a>
+        </div>
+    </div>
+</section>
       <section id="address">
         <h2>Our Location</h2>
         <p>Visit us at our clinic:</p>
@@ -756,6 +778,16 @@ window.addEventListener('scroll', function() {
 // Enable smooth scrolling for the entire page on iOS
 if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
     document.documentElement.style.cssText = 'scroll-behavior: smooth;';
+}
+function toggleTeleConsult() {
+    const info = document.getElementById('teleConsultInfo');
+    if (info.style.display === 'none') {
+        info.style.display = 'block';
+        // Smooth scroll to the instructions
+        info.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+        info.style.display = 'none';
+    }
 }
 </script>
 
